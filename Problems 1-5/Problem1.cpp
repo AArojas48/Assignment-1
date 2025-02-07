@@ -15,12 +15,16 @@ int main(int argc, const char * argv[]) {
     int target = 9;
     
     int size = sizeof(nums) / sizeof(nums[0]);
+    cout << "[";
     
     for(int i = 0; i < size; i++) {
-        if(nums[i] + nums[i + 1] == target) {
-            cout << "[" << i << "," << i + 1 << "]";
+        for(int j = i + 1; j < size; j++) {
+        if(nums[i] + nums[j] == target) {
+           cout << i << "," << j; 
+        }
         }
     }
+    cout << "]";
     cout << endl;
     return 0;
 }
